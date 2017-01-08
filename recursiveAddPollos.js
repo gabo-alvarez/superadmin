@@ -1,5 +1,6 @@
 var oldCuate="";
 var minTime=15552000	//6 meses de antiguedad.
+var res=60
 //var minTime=315360000;
 function recursiveApproval(){
 		var  a=document.getElementsByName("approve button")[0];
@@ -85,6 +86,10 @@ function getDeclineUser(e){
 	return _element;
 }
 
+var res=res - 1;
+if (res < 1) {
+	res=60;
+	location.reload(true);
+}
 
  recursiveApproval();
- 
